@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-18T18:15:17+08:00</updated>
+  <updated>2012-03-18T20:44:02+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -42,7 +42,7 @@ I think that this solution is quite satisfactory for technical posts.</p>
 </span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>Liquid error: Could not open library &#8216;.dll&#8217;: 找不到指定的模組。</p>
 ]]></content>
   </entry>
   
