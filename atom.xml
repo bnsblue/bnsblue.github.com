@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T14:16:27+08:00</updated>
+  <updated>2012-03-19T14:19:23+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -40,7 +40,8 @@ This is <script type="math/tex">\Gamma\vdash_\gamma h_1</script></p>
 
 <h3>Type Checking Example</h3>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Example:(Java)  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
