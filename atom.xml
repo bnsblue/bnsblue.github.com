@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T14:54:44+08:00</updated>
+  <updated>2012-03-19T15:01:35+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -32,6 +32,8 @@
 <h2>Inline LaTeX formulae</h2>
 
 <p>However, the work-around mentioned above cannot cope with inline <script type="math/tex">\LaTeX</script> formulae. To solve this problem, I read through the discussion and found <a href="https://github.com/imathis/octopress/pull/447/files">this</a>. <strong>NSError</strong> has add a plugin to octopress (although it is not yet merge to the master of octopress by imathis). No worries. It is so easy to build up the plugin that we can try to DIY the function.</p>
+
+<hr />
 
 <h1>Examples</h1>
 
