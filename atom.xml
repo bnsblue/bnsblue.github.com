@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T13:51:52+08:00</updated>
+  <updated>2012-03-19T14:07:13+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -18,36 +18,42 @@
     <link href="http://bnsblue.github.com/blog/2012/03/18/technical-blogging-with-octopress-and-mathjax/"/>
     <updated>2012-03-18T14:46:00+08:00</updated>
     <id>http://bnsblue.github.com/blog/2012/03/18/technical-blogging-with-octopress-and-mathjax</id>
-    <content type="html"><![CDATA[<p>This is a test post using Octopress and MathJax on github page!
-I think that this solution is quite satisfactory for technical posts.</p>
+    <content type="html"><![CDATA[<h2>Front Matter</h2>
 
-<p>For example, we write some math formulae.</p>
+<p>This is a test post using Octopress and MathJax on github page! I think that this solution is quite satisfactory for technical posts. Such version of octopress is modified so that <script type="math/tex">\LATEX</script> can be correctly rendered by MathJax. Together with the intrinsic <code>codeblock</code> plugin, octopress is now one of the best blogging environment for technical posts.</p>
 
-<p>This is <script type="math/tex">\Gamma </script> WOW hello my love</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span> <span class="n">argv</span> <span class="p">)</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>   <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
-</span><span class='line'>   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+<!--more-->
 
 
+<h2>LaTeX Rendering with MathJax</h2>
 
+<p>MathJax is a state-of-the-art LaTeX rendering plugin for normal browsers. Using it is convenient and easy.</p>
+
+<h2>Examples</h2>
+
+<p>I use my note on the survey of Type System as example as follows:</p>
+
+<p>Today we are going to talk about the type system.</p>
+
+<p>For example, we write some math formulae.
+This is <script type="math/tex">\Gamma\vdash<em>\gamma h_1\models</em>\gamma h_2 </script></p>
+
+<h3>Type Checking Example</h3>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'><span class="p">}</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kt">int</span> <span class="nf">f</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>   <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
+</span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p><em>Explicit type declarations</em> provide types for key points:<br/>
+* f:integer->integer<br/>
+* x:integer</p>
 
 <p>use the command <code>test</code></p>
 ]]></content>
