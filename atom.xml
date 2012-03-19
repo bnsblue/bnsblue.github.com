@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T14:12:45+08:00</updated>
+  <updated>2012-03-19T14:16:27+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -36,7 +36,7 @@
 <p>Today we are going to talk about the type system.</p>
 
 <p>For example, we write some math formulae.
-This is <script type="math/tex">\Gamma\vdash<em>(\gamma)h_1\models</em>(\gamma)h_2 </script></p>
+This is <script type="math/tex">\Gamma\vdash_\gamma h_1</script></p>
 
 <h3>Type Checking Example</h3>
 
