@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T13:28:50+08:00</updated>
+  <updated>2012-03-19T13:32:17+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -23,7 +23,9 @@ I think that this solution is quite satisfactory for technical posts.</p>
 
 <p>For example, we write some math formulae.</p>
 
-<script type="math/tex">\(\Gamma\vdash_\gamma h_1\models_\gamma h_2\)</script>
+<script type="math/tex"> </script>
+
+
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
