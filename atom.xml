@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T14:23:53+08:00</updated>
+  <updated>2012-03-19T14:35:06+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -20,7 +20,7 @@
     <id>http://bnsblue.github.com/blog/2012/03/18/technical-blogging-with-octopress-and-mathjax</id>
     <content type="html"><![CDATA[<h2>Front Matter</h2>
 
-<p>This is a test post using Octopress and MathJax on github page! I think that this solution is quite satisfactory for technical posts. Such version of octopress is modified so that <script type="math/tex">\Gamam</script> can be correctly rendered by MathJax. Together with the intrinsic <code>codeblock</code> plugin, octopress is now one of the best blogging environment for technical posts.</p>
+<p>This is a test post using Octopress and MathJax on github page! I think that this solution is quite satisfactory for technical posts. Such version of octopress is modified so that <script type="math/tex">\LaTeX</script> can be correctly rendered by MathJax. Together with the intrinsic <code>codeblock</code> plugin, octopress is now one of the best blogging environment for technical posts.</p>
 
 <!--more-->
 
