@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T15:23:40+08:00</updated>
+  <updated>2012-03-19T15:25:37+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -33,6 +33,8 @@
 
 <h2>Basic MathJax Integration</h2>
 
+<p>The original source of this approach can be found [here] [1]</p>
+
 <p>It is simple to integrate the MathJax into octopress framework &#8211; once you embed the code into <code>octopress/source/_includes/head.html</code> then it is done. The only step left is that you should write your LaTeX formulae legally. Because of the <code>rake generate</code> command will compile the markdown file, you should use <code>&lt;div markdown="0"&gt;</code> and <code>&lt;/div&gt;</code> to bracket the LaTex code.</p>
 
 <figure class='code'><figcaption><span>LaTeX integration  </span></figcaption>
@@ -49,7 +51,7 @@
 
 <h2>Inline LaTeX formulae</h2>
 
-<p>However, the work-around mentioned above cannot cope with inline <script type="math/tex">\LaTeX</script> formulae. To solve this problem, I read through the discussion and found [this]<a href="https://github.com/imathis/octopress/pull/447/files">2</a>. <strong>NSError</strong> has add a plugin to octopress (although it is not yet merge to the master of octopress by imathis). No worries. It is so easy to build up the plugin that we can try to DIY the function.</p>
+<p>However, the work-around mentioned above cannot cope with inline <script type="math/tex">\LaTeX</script> formulae. To solve this problem, I read through the discussion and found [this] [2]. <strong>NSError</strong> has add a plugin to octopress (although it is not yet merge to the master of octopress by imathis). No worries. It is so easy to build up the plugin that we can try to DIY the function.</p>
 
 <hr />
 
