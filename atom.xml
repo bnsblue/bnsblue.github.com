@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T16:24:42+08:00</updated>
+  <updated>2012-03-19T16:26:46+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -90,9 +90,15 @@ This is <script type="math/tex">\Gamma\vdash_\gamma h_1</script></p>
 
 <p>use the command <code>test</code></p>
 
-<h1>Google Webfont</h1>
+<hr />
 
-<p>should check <a href="http://www.google.com/webfonts">Google Webfont</a> out often. Very useful</p>
+<h1>Octopress Font Size Modification</h1>
+
+<p>follow the <a href="http://simplypatrick.heroku.com/blog/2011/10/08/hello-octopress">instruction</a></p>
+
+<h2>Google Webfont</h2>
+
+<p>should check <a href="http://simplypatrick.heroku.com/blog/2011/10/08/hello-octopress">Google Webfont</a> out often. Very useful</p>
 ]]></content>
   </entry>
   
