@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T15:01:35+08:00</updated>
+  <updated>2012-03-19T15:05:59+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -44,7 +44,7 @@
 <p>For example, we write some math formulae.
 This is <script type="math/tex">\Gamma\vdash_\gamma h_1</script></p>
 
-<h3>Type Checking Example</h3>
+<h1>Type Checking Example</h1>
 
 <figure class='code'><figcaption><span>Example:(Java)  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
