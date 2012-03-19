@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-19T15:10:13+08:00</updated>
+  <updated>2012-03-19T15:22:00+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -33,9 +33,23 @@
 
 <h2>Basic MathJax Integration</h2>
 
+<p>It is simple to integrate the MathJax into octopress framework &#8211; once you embed the code into <code>octopress/source/_includes/head.html</code> then it is done. The only step left is that you should write your LaTeX formulae legally. Because of the <code>rake generate</code> command will compile the markdown file, you should use <code>&lt;div markdown="0"&gt;</code> and <code>&lt;/div&gt;</code> to bracket the LaTex code.</p>
+
+<figure class='code'><figcaption><span>LaTeX integration  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">markdown=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>   Your\_LaTeX\_code\_here
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Deploy and refresh the browser. You should now be able to see the rendered formulae show up on your blog.</p>
+
 <h2>Inline LaTeX formulae</h2>
 
-<p>However, the work-around mentioned above cannot cope with inline <script type="math/tex">\LaTeX</script> formulae. To solve this problem, I read through the discussion and found <a href="https://github.com/imathis/octopress/pull/447/files">this</a>. <strong>NSError</strong> has add a plugin to octopress (although it is not yet merge to the master of octopress by imathis). No worries. It is so easy to build up the plugin that we can try to DIY the function.</p>
+<p>However, the work-around mentioned above cannot cope with inline <script type="math/tex">\LaTeX</script> formulae. To solve this problem, I read through the discussion and found [this]<a href="https://github.com/imathis/octopress/pull/447/files">2</a>. <strong>NSError</strong> has add a plugin to octopress (although it is not yet merge to the master of octopress by imathis). No worries. It is so easy to build up the plugin that we can try to DIY the function.</p>
 
 <hr />
 
@@ -69,6 +83,11 @@ This is <script type="math/tex">\Gamma\vdash_\gamma h_1</script></p>
 -   x:integer</p>
 
 <p>use the command <code>test</code></p>
+
+<h1>Reference</h1>
+
+<p>[1] http://greglus.com/blog/2011/11/29/integrate-MathJax-LaTeX-and-MathML-Markup-in-Octopress/
+[2] https://github.com/imathis/octopress/pull/447/files</p>
 ]]></content>
   </entry>
   
