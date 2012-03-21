@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-21T13:18:15+08:00</updated>
+  <updated>2012-03-21T13:20:22+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -20,7 +20,7 @@
     <id>http://bnsblue.github.com/blog/2012/03/18/technical-blogging-with-octopress-and-mathjax</id>
     <content type="html"><![CDATA[<h1>Front Matter</h1>
 
-<p>This is a test post using Octopress and MathJax on github page! I think that this solution is quite satisfactory for technical posts. Such version of octopress is modified so that <span markdown="0"><script type="math/tex">\LaTeX</script></span> can be correctly rendered by MathJax. Together with the intrinsic <code>codeblock</code> plugin, octopress is now one of the best blogging environment for technical posts!</p>
+<p>This is a test post using Octopress and MathJax on github page! I think that this solution is quite satisfactory for technical posts. Such version of octopress is modified so that {% m %}\LaTeX{% em %} can be correctly rendered by MathJax. Together with the intrinsic <code>codeblock</code> plugin, octopress is now one of the best blogging environment for technical posts!</p>
 
 <!--more-->
 
@@ -29,10 +29,10 @@
 
 <h1>LaTeX Rendering with MathJax</h1>
 
-<p>MathJax is a state-of-the-art <span markdown="0"><script type="math/tex">\LaTeX</script></span> rendering plugin for normal browsers. Using it is convenient and easy.
-And this is a test for inline <span markdown="0"><script type="math/tex">\LaTeX_\gamma</script></span></p>
+<p>MathJax is a state-of-the-art {% m %}\LaTeX{% em %} rendering plugin for normal browsers. Using it is convenient and easy.
+And this is a test for inline {% m %}\LaTeX_\gamma{% em %}</p>
 
-<p>Another test \(\Gamma,\Sigma,\Delta,\Alpha\)</p>
+<p>Another test {% raw %}\(\Gamma,\Sigma,\Delta,\Alpha\){% endraw %}</p>
 
 <h2>Basic MathJax Integration</h2>
 
@@ -42,73 +42,26 @@ And this is a test for inline <span markdown="0"><script type="math/tex">\LaTeX_
 
 <blockquote><p>hihi</p></blockquote>
 
-<figure class='code'><figcaption><span>LaTeX integration  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">markdown=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>   Your_LaTeX_code_here
-</span><span class='line'><span class="nt">&lt;/div&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>{% codeblock LaTeX integration lang:html %}</p>
 
+<div markdown="0">
+   Your_LaTeX_code_here
+</div>
+
+
+<p>{% endcodeblock %}</p>
 
 <p>Deploy and refresh the browser. You should now be able to see the rendered formulae show up on your blog.</p>
 
 <h2>Inline LaTeX formulae</h2>
 
-<p>However, the work-around mentioned above cannot cope with inline <span markdown="0"><script type="math/tex">\LaTeX</script></span> formulae. To solve this problem, I read through the discussion and found <a href="https://github.com/imathis/octopress/pull/447/files">this</a>. To handle this, <strong>NSError</strong> has add a plugin to octopress. However, it is not yet merge to the master of octopress by imathis.</p>
+<p>However, the work-around mentioned above cannot cope with inline {% m %}\LaTeX{% em %} formulae. To solve this problem, I read through the discussion and found <a href="https://github.com/imathis/octopress/pull/447/files">this</a>. To handle this, <strong>NSError</strong> has add a plugin to octopress. However, it is not yet merge to the master of octopress by imathis.</p>
 
 <p>No worries. This plugin is very straightforward that we can simply implement it on our own.</p>
 
-<figure class='code'><figcaption><span>MathJax-plugin implementation  (MathJax.rb)</span> <a href='http://bnsblue.github.com/downloads/code/plugins/MathJax.rb'>download</a></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
-</span><span class='line'>  <span class="k">class</span> <span class="nc">MathJaxBlockTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
-</span><span class='line'>      <span class="s1">&#39;&lt;span markdown=&quot;0&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;&#39;</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  <span class="k">class</span> <span class="nc">MathJaxInlineTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
-</span><span class='line'>      <span class="s1">&#39;&lt;span markdown=&quot;0&quot;&gt;&lt;script type=&quot;math/tex&quot;&gt;&#39;</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  <span class="k">class</span> <span class="nc">MathJaxEndTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
-</span><span class='line'>      <span class="s1">&#39;&lt;/script&gt;&lt;/span&gt;&#39;</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;math&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">MathJaxBlockTag</span><span class="p">)</span>
-</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">MathJaxInlineTag</span><span class="p">)</span>
-</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;endmath&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">MathJaxEndTag</span><span class="p">)</span>
-</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;em&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">MathJaxEndTag</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>{% include_code MathJax-plugin implementation lang:ruby plugins/MathJax.rb %}</p>
 
-
-<p>Here I&#8217;ve made a minor modification to the approach. I&#8217;ve added the labels <code>&lt;span markdown="0"&gt;</code> before <code>&lt;script type...&gt;</code> and <code>&lt;/span&gt;</code> after <code>&lt;/script&gt;</code>. Such modification leaves the frequently-used-in-LaTeX underscore <code>_</code> uninterpreted by the Markdown interpreter. Thus, there&#8217;s no need to escape the underscore anymore. That is, the LaTeX code you type between <code>{% m %}</code> and <code>{% em %}</code> is now the same as that you type in a LaTeX editor.</p>
+<p>Here I&#8217;ve made a minor modification to the approach. I&#8217;ve added the labels <code>&lt;span markdown="0"&gt;</code> before <code>&lt;script type...&gt;</code> and <code>&lt;/span&gt;</code> after <code>&lt;/script&gt;</code>. Such modification leaves the frequently-used-in-LaTeX underscore <code>_</code> uninterpreted by the Markdown interpreter. Thus, there&#8217;s no need to escape the underscore anymore. That is, the LaTeX code you type between <code>{% raw %}{% m %}{% endraw %}</code> and <code>{% raw %}{% em %}{% endraw %}</code> is now the same as that you type in a LaTeX editor.</p>
 
 <p>Please notice that this approach should be mainly attributed to <a href="https://github.com/imathis/octopress/pull/447/files"><strong>NSError and his post</strong></a>.</p>
 
@@ -121,23 +74,18 @@ And this is a test for inline <span markdown="0"><script type="math/tex">\LaTeX_
 <p>Today we are going to talk about the type system.</p>
 
 <p>For example, we write some math formulae.
-This is <span markdown="0"><script type="math/tex">\Gamma\vdash_\gamma h_1</script></span></p>
+This is {% m %}\Gamma\vdash_\gamma h_1{% em %}</p>
 
 <hr />
 
 <h1>Type Checking Example</h1>
 
-<figure class='code'><figcaption><span>Example:(Java)  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kt">int</span> <span class="nf">f</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
-</span><span class='line'><span class="o">{</span>
-</span><span class='line'>   <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>{% codeblock Example:(Java) lang:java %}
+int f(int x)
+{
+   return 2*x+1;
+}
+{% endcodeblock%}</p>
 
 <p><em>Explicit type declarations</em> provide types for key points:<br/>
 -   f:integer->integer<br/>
@@ -154,6 +102,12 @@ This is <span markdown="0"><script type="math/tex">\Gamma\vdash_\gamma h_1</scri
 <h2>Google Webfont</h2>
 
 <p>should check <a href="http://simplypatrick.heroku.com/blog/2011/10/08/hello-octopress">Google Webfont</a> out often. Very useful</p>
+
+<hr />
+
+<h1>Escape {% raw %}{% and %}{% endraw %}</h1>
+
+<p>use <code>{% raw %}{% raw %}{% endraw %}</code> and {% raw %}{% endraw %}{% endraw %}</p>
 ]]></content>
   </entry>
   
