@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-21T12:42:15+08:00</updated>
+  <updated>2012-03-21T12:46:38+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -107,6 +107,8 @@ And this is a test for inline <span markdown="0"><script type="math/tex">\LaTeX_
 
 
 <p>Here I&#8217;ve made a minor modification to the approach. That is, I&#8217;ve added the labels <code>&lt;span markdown="0"&gt;</code> before <code>&lt;script type...&gt;</code> and <code>&lt;/span&gt;</code> after <code>&lt;/script&gt;</code>. Such modification makes the frequently-used-in-LaTeX underscore (_) not interpreted by markdown interpreter. So that in the LaTeX block I don&#8217;t need to escape the underscore anymore. The LaTeX code is now the same as that you type in a LaTeX editor.</p>
+
+<p>Please notice that this approach should be mainly attributed to <a href="https://github.com/imathis/octopress/pull/447/files"><strong>NSError and his post</strong></a>.</p>
 
 <hr />
 
