@@ -137,6 +137,10 @@ And this is a test for inline <span markdown="0"><script type="math/tex">\LaTeX_
 
 <p>No worries. This plugin is very straightforward that we can simply implement it on our own.</p>
 
+<p>File /home/bnsblue/Dropbox/octopress/octopress/source/downloads/code/plugins/MathJax.rb could not be found</p>
+
+<p>Here I&#8217;ve made a minor modification to the approach. That is, I&#8217;ve added the labels <code>&lt;span markdown="0"&gt;</code> before <code>&lt;script type...&gt;</code> and <code>&lt;/span&gt;</code> after <code>&lt;/script&gt;</code>. Such modification makes the frequently-used-in-LaTeX underscore (_) not interpreted by markdown interpreter. So that in the LaTeX block I don&#8217;t need to escape the underscore anymore. The LaTeX code is now the same as that you type in a LaTeX editor.</p>
+
 <hr />
 
 <h1>Examples</h1>
