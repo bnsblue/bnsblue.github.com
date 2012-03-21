@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-21T21:16:09+08:00</updated>
+  <updated>2012-03-21T21:20:46+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -128,6 +128,20 @@ This is <span markdown="0"><script type="math/tex">\Gamma\vdash_\gamma h_1</scri
 \dot{y} &amp; = \rho x - y - xz \
 \dot{z} &amp; = -\beta z + xy
 \end{aligned}
+</script></span></p>
+
+<p>The Cauchy-Schwarz Inequality
+<span markdown="0"><script type="math/tex; mode=display">
+\left( \sum<em>{k=1}<sup>n</sup> a_k b_k \right)<sup>2</sup> \leq \left( \sum</em>{k=1}<sup>n</sup> a_k<sup>2</sup> \right) \left( \sum_{k=1}<sup>n</sup> b_k<sup>2</sup> \right)
+</script></span></p>
+
+<p>A Cross Product Formula
+<span markdown="0"><script type="math/tex; mode=display">
+\mathbf{V}<em>1 \times \mathbf{V}</em>2 =  \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0
+\end{vmatrix}
 </script></span></p>
 
 <hr />
