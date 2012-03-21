@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-21T12:55:52+08:00</updated>
+  <updated>2012-03-21T12:56:55+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -106,7 +106,7 @@ And this is a test for inline <span markdown="0"><script type="math/tex">\LaTeX_
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Here I&#8217;ve made a minor modification to the approach. I&#8217;ve added the labels <code>&lt;span markdown="0"&gt;</code> before <code>&lt;script type...&gt;</code> and <code>&lt;/span&gt;</code> after <code>&lt;/script&gt;</code>. Such modification leaves the frequently-used-in-LaTeX underscore <code>_</code> uninterpreted by the Markdown interpreter. Thus, there&#8217;s no need to escape the underscore anymore. That is, the LaTeX code you type between <code>\{\% m \%\}</code> and <code>\{\% em\%\}</code> is now the same as that you type in a LaTeX editor.</p>
+<p>Here I&#8217;ve made a minor modification to the approach. I&#8217;ve added the labels <code>&lt;span markdown="0"&gt;</code> before <code>&lt;script type...&gt;</code> and <code>&lt;/span&gt;</code> after <code>&lt;/script&gt;</code>. Such modification leaves the frequently-used-in-LaTeX underscore <code>_</code> uninterpreted by the Markdown interpreter. Thus, there&#8217;s no need to escape the underscore anymore. That is, the LaTeX code you type between <code>\{\% m \%\}</code> and <code>&lt;/script&gt;&lt;/span&gt;</code> is now the same as that you type in a LaTeX editor.</p>
 
 <p>Please notice that this approach should be mainly attributed to <a href="https://github.com/imathis/octopress/pull/447/files"><strong>NSError and his post</strong></a>.</p>
 
