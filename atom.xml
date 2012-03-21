@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-21T11:50:18+08:00</updated>
+  <updated>2012-03-21T11:55:54+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -30,7 +30,7 @@
 <h1>LaTeX Rendering with MathJax</h1>
 
 <p>MathJax is a state-of-the-art <script type="math/tex">\LaTeX</script> rendering plugin for normal browsers. Using it is convenient and easy.
-And this is a test for inline <span markdown="0">(\LaTeX)</span></p>
+And this is a test for inline <span markdown="0">\(\LaTeX\)</span></p>
 
 <h2>Basic MathJax Integration</h2>
 
