@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-21T13:26:10+08:00</updated>
+  <updated>2012-03-21T13:27:33+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -105,7 +105,7 @@ int f(int x)
 
 <h1>Escape {% raw %}&#8221;{%&#8221; and &#8220;%}&#8221;{% endraw %}</h1>
 
-<p>use {% raw %}<code>{% raw %}</code> and <code>{% endraw %}</code>{% endraw %}</p>
+<p>{% raw %}use <code>{% raw %}</code> and <code>{% endraw %}</code> to escape {% endraw %}</p>
 ]]></content>
   </entry>
   
