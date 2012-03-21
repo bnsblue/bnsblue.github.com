@@ -137,7 +137,53 @@ And this is a test for inline <span markdown="0"><script type="math/tex">\LaTeX_
 
 <p>No worries. This plugin is very straightforward that we can simply implement it on our own.</p>
 
-<p>File /home/bnsblue/Dropbox/octopress/octopress/source/downloads/code/plugins/MathJax.rb could not be found</p>
+<figure class='code'><figcaption><span>MathJax-plugin implementation  (MathJax.rb)</span> <a href='/downloads/code/plugins/MathJax.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">MathJaxBlockTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>      <span class="s1">&#39;&lt;span markdown=&quot;0&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;&#39;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">MathJaxInlineTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>      <span class="s1">&#39;&lt;span markdown=&quot;0&quot;&gt;&lt;script type=&quot;math/tex&quot;&gt;&#39;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">MathJaxEndTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>      <span class="s1">&#39;&lt;/script&gt;&lt;/span&gt;&#39;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;math&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">MathJaxBlockTag</span><span class="p">)</span>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">MathJaxInlineTag</span><span class="p">)</span>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;endmath&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">MathJaxEndTag</span><span class="p">)</span>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;em&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">MathJaxEndTag</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Here I&#8217;ve made a minor modification to the approach. That is, I&#8217;ve added the labels <code>&lt;span markdown="0"&gt;</code> before <code>&lt;script type...&gt;</code> and <code>&lt;/span&gt;</code> after <code>&lt;/script&gt;</code>. Such modification makes the frequently-used-in-LaTeX underscore (_) not interpreted by markdown interpreter. So that in the LaTeX block I don&#8217;t need to escape the underscore anymore. The LaTeX code is now the same as that you type in a LaTeX editor.</p>
 
