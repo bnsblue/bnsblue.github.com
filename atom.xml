@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-21T11:55:54+08:00</updated>
+  <updated>2012-03-21T12:03:05+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -20,7 +20,7 @@
     <id>http://bnsblue.github.com/blog/2012/03/18/technical-blogging-with-octopress-and-mathjax</id>
     <content type="html"><![CDATA[<h1>Front Matter</h1>
 
-<p>This is a test post using Octopress and MathJax on github page! I think that this solution is quite satisfactory for technical posts. Such version of octopress is modified so that <script type="math/tex">\LaTeX</script> can be correctly rendered by MathJax. Together with the intrinsic <code>codeblock</code> plugin, octopress is now one of the best blogging environment for technical posts!</p>
+<p>This is a test post using Octopress and MathJax on github page! I think that this solution is quite satisfactory for technical posts. Such version of octopress is modified so that <span markdown="0"><script type="math/tex">\LaTeX</script></span> can be correctly rendered by MathJax. Together with the intrinsic <code>codeblock</code> plugin, octopress is now one of the best blogging environment for technical posts!</p>
 
 <!--more-->
 
@@ -29,7 +29,7 @@
 
 <h1>LaTeX Rendering with MathJax</h1>
 
-<p>MathJax is a state-of-the-art <script type="math/tex">\LaTeX</script> rendering plugin for normal browsers. Using it is convenient and easy.
+<p>MathJax is a state-of-the-art <span markdown="0"><script type="math/tex">\LaTeX</script></span> rendering plugin for normal browsers. Using it is convenient and easy.
 And this is a test for inline <span markdown="0">\(\LaTeX\)</span></p>
 
 <h2>Basic MathJax Integration</h2>
@@ -54,7 +54,7 @@ And this is a test for inline <span markdown="0">\(\LaTeX\)</span></p>
 
 <h2>Inline LaTeX formulae</h2>
 
-<p>However, the work-around mentioned above cannot cope with inline <script type="math/tex">\LaTeX</script> formulae. To solve this problem, I read through the discussion and found <a href="https://github.com/imathis/octopress/pull/447/files">this</a>. To handle this, <strong>NSError</strong> has add a plugin to octopress. However, it is not yet merge to the master of octopress by imathis.</p>
+<p>However, the work-around mentioned above cannot cope with inline <span markdown="0"><script type="math/tex">\LaTeX</script></span> formulae. To solve this problem, I read through the discussion and found <a href="https://github.com/imathis/octopress/pull/447/files">this</a>. To handle this, <strong>NSError</strong> has add a plugin to octopress. However, it is not yet merge to the master of octopress by imathis.</p>
 
 <p>No worries. This plugin is very straightforward that we can simply implement it on our own.</p>
 
@@ -67,7 +67,7 @@ And this is a test for inline <span markdown="0">\(\LaTeX\)</span></p>
 <p>Today we are going to talk about the type system.</p>
 
 <p>For example, we write some math formulae.
-This is <script type="math/tex">\Gamma\vdash_\gamma h_1</script></p>
+This is <span markdown="0"><script type="math/tex">\Gamma\vdash_\gamma h_1</script></span></p>
 
 <hr />
 
