@@ -4,7 +4,7 @@
   <title><![CDATA[Stream of (Un)Consciousness]]></title>
   <link href="http://bnsblue.github.com/atom.xml" rel="self"/>
   <link href="http://bnsblue.github.com/"/>
-  <updated>2012-03-21T13:42:59+08:00</updated>
+  <updated>2012-03-21T13:45:06+08:00</updated>
   <id>http://bnsblue.github.com/</id>
   <author>
     <name><![CDATA[bnsblue]]></name>
@@ -163,7 +163,7 @@ This is <span markdown="0"><script type="math/tex">\Gamma\vdash_\gamma h_1</scri
 
 <p>OR</p>
 
-<p>checkout <a href="http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags/5866429#5866429">this post</a> on stackoverflow</p>
+<p>checkout <a href="http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags/5866429#5866429">this post</a> on stackoverflow, and <a href="http://tesoriere.com/2010/08/25/liquid-code-in-a-liquid-template-with-jekyll/">this post</a></p>
 ]]></content>
   </entry>
   
