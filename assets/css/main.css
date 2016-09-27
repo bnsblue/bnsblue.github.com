@@ -2586,11 +2586,28 @@
 					color: #963c3e;
 				}
 
+	.hexagon_wrapper {
+		position:relative;
+
+		width: 320px;
+		height: 366.41px;
+
+	}
+
+	.hexagon_wrapper.right {
+		float: right;
+		margin: -5em 0 1em 3.5em;
+	}
+	@media screen and (max-width: 1280px) {
+		.hexagon_wrapper.right {
+			float: center;
+			margin: 0 0 0 0;
+		}
+	}
 
 	.hexagon {
-	  
 	  position: relative;
-	  width: 300px; 
+	  width: 300px;
 	  height: 173.21px;
 	  /*margin: 86.60px 0;*/
 	  margin: 0 0 0 0;
@@ -2599,18 +2616,17 @@
 	  background-position: center;
 	  border-left: solid 5px #333333;
 	  border-right: solid 5px #333333;
-	  
+		top: 50%;
+		left:50%;
+		margin: -86.60px 0 0 -150px;
 	}
 
-	.hexagon.right {
-		float: right;
-		margin: 0 0 1em 3.5em;
-	}
+
 
 	.hexTop,
 	.hexBottom {
 	  position: absolute;
-	  z-index: 1;
+	  z-index: 2;
 	  width: 212.13px;
 	  height: 212.13px;
 	  overflow: hidden;
@@ -4050,7 +4066,7 @@
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.col { 
+	.col {
 		margin: 1% 0 1% 0%;
 	}
 }
